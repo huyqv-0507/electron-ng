@@ -42,7 +42,7 @@ export class MainPageComponent implements OnInit {
     console.log(this.port)
     await this.serialPortService.writePort(this.port, 'hello ae')
     this.port.on('data', function (data: any) {
-      console.log('Data:', data)
+      console.log('Dataa:', data)
     })
   }
   async getControl() {
