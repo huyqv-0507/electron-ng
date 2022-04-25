@@ -1,12 +1,20 @@
 {
+  "productName": "VNPT Application",
+  "description": "Application using Electron technology",
   "name": "vnpt-app",
+  "author": "huynlhcm",
   "version": "0.0.0",
+  "main": "main.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "electron": "ng build --base-href ./ && electron .",
+    "electron-start": "electron .",
+    "electron-build": "ng build --base-href ./",
+    "rebuild": "electron-rebuild -f -w serialport"
   },
   "private": true,
   "dependencies": {
@@ -18,8 +26,21 @@
     "@angular/platform-browser": "~13.3.0",
     "@angular/platform-browser-dynamic": "~13.3.0",
     "@angular/router": "~13.3.0",
+    "@ngx-translate/core": "^14.0.0",
+    "@ngx-translate/http-loader": "^7.0.0",
+    "@progress/kendo-angular-intl": "^3.1.3",
+    "@progress/kendo-angular-notification": "^3.0.5",
+    "@progress/kendo-angular-popup": "^4.0.6",
+    "@types/serialport": "^8.0.2",
+    "docx": "^7.3.0",
+    "ngx-seo": "^5.3.0",
+    "os-browserify": "^0.3.0",
+    "path-browserify": "^1.0.1",
     "rxjs": "~7.5.0",
+    "serialport": "^10.3.0",
+    "stream-browserify": "^3.0.0",
     "tslib": "^2.3.0",
+    "util": "^0.12.4",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
@@ -27,7 +48,13 @@
     "@angular/cli": "~13.3.1",
     "@angular/compiler-cli": "~13.3.0",
     "@types/jasmine": "~3.10.0",
-    "@types/node": "^12.11.1",
+    "@types/node": "^12.20.48",
+    "@types/q": "^1.5.5",
+    "electron": "^18.0.4",
+    "electron-packager": "^15.4.0",
+    "electron-rebuild": "^3.2.7",
+    "electron-wix-msi": "^4.0.0",
+    "exe-icon-extractor": "^1.0.8",
     "jasmine-core": "~4.0.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
@@ -35,5 +62,11 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
     "typescript": "~4.6.2"
+  },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false,
+    "child_process": false
   }
 }

@@ -1,0 +1,37 @@
+<section id="main-page">
+    <p class="v-pointer">main-page works!</p>
+    <div *ngFor="let m of menu" (click)="testRoute()">
+        <p>{{m.Name}}</p><br />
+    </div>
+    <div>
+        <h2>ket noi</h2>
+        <table border="1px solid black">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>friendlyName</th>
+                    <th>locationId</th>
+                    <th>manufacturer</th>
+                    <th>path</th>
+                    <th>pnpId</th>
+                    <th>productId</th>
+                    <th>serialNumber</th>
+                    <th>vendorId</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of listSerialPorts; let i = index">
+                    <td>{{i + 1}}</td>
+                    <td>{{item.friendlyName}}</td>
+                    <td>{{item.locationId?item.locationId:'empty'}}</td>
+                    <td>{{item.manufacturer}}</td>
+                    <td>{{item.path}}</td>
+                    <td>{{item.pnpId}}</td>
+                    <td>{{item.productId?item.productId:'empty'}}</td>
+                    <td>{{item.serialNumber?item.serialNumber:'empty'}}</td>
+                    <td>{{item.vendorId?item.vendorId:'empty'}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>

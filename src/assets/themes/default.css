@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'Philosopher', sans-serif;
+    src: url('/src/assets/fonts/Philosopher/Philosopher-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+:root {
+    font-family: 'Philosopher', sans-serif;
+    --primary-color: #3B82F6;
+    --secondary-color: #64748B;
+    --success-color: #22C55E;
+    --info-color: #F59E0B;
+    --warning-color: #3B82F6;
+    --help-color: #A855F7;
+    --danger-color: #EF4444;
+    --plain-color: #6c757d;
+}
+.v-pointer {
+    cursor: pointer;
+}
+.v-textinput {}
